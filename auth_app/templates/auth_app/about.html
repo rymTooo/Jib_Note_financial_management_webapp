@@ -18,15 +18,16 @@
     </nav>
 </header>
 <section class="content">
-    {% comment %} {% include "C:\Users\pattp\jib_note\auth_app\templates\auth_app\message.html" %} {% endcomment %}
+    {% include "C:\Users\pattp\jib_note2\auth_app\templates\auth_app\message.html" %}
     <div class="left-panel">
         <!-- <img src = "Scottish_fold_rw.jpg"> -->
         <div>
             {% if user.is_authenticated %}
             <h3> Hello {{fname}} </h3>
             <h4> You are successfully logged in.</h4>
-            {% endif %}
             <p>StudentID: 6422780120</p>
+            {% endif %}
+            
         </div>
         <div>
             <p> Cat is surely a walking cuteness ball</p>
