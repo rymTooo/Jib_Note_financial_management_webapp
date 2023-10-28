@@ -17,7 +17,6 @@ def login_f(requests):
     if requests.method == "POST":
         username= requests.POST["username"]
         password= requests.POST["password"]
-
         user = authenticate(username = username, password = password) # will return none if password and username doesn't match
         if user is not None:
             login(requests, user) # build in function from django for login
@@ -38,6 +37,14 @@ def signup(requests):
         username= requests.POST["username"]
         password= requests.POST["password"]
         cpassword= requests.POST["cpassword"]
+        if User.objects.filter(username = username).exists():# equal to running sql command as "select * from user(table) where username = {given username}" >> so it return a row if it username already exsit and .exist() change result to boolean.
+            messages.error(requests, "Username already exist. Please try another one")
+            # need to continue with this : https://stackoverflow.com/questions/4482392/how-do-i-raise-a-validationerror-or-do-something-similar-in-views-py-of-my-dja
+        
+        if User.objects.filter(password = password).exist():
+            messages.error(requests, "Password already exist. Please try another one")
+
+        
         if (password == cpassword):# if the password is correct 
             #!!! still need to checck for copy of password and username. !!!
             user = User.objects.create_user(username = username, email = email , password = password)#create a user
@@ -47,7 +54,7 @@ def signup(requests):
             messages.success(request = requests, message = "Yay, succesfully create an account")#message.success is to 
             return redirect("/login")# change url to /login >> will be direct to login_page based on urls.py file.
         else:
-            messages.info(request=requests, message= "Check the password")
+            messages.info(request=requests, message= "Your password is not the same.")
 
     return render(requests, 'auth_app/signup_page.html')
 
