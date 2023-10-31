@@ -20,6 +20,7 @@
 <section class="content">
     {% include "C:\Users\pattp\jib_note2\auth_app\templates\auth_app\message.html"%}
     <h2> login</h2>
+    <p>{{username}}</p>
     <form action = "" method = "post">
         {% csrf_token %}
         <label for = "username"> Username</label>

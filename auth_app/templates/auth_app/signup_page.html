@@ -19,7 +19,7 @@
 </header>
 <section class="content">
     <div class="item">
-        <h2>Sign up</h2>
+        {% comment %} <h2>Sign up</h2>
         <form action = "/signup" method = "post">
             {% csrf_token %}
             <label for = "fname"> First name</label>
@@ -44,7 +44,19 @@
             <input type = "password" name = "cpassword" id = "cpassword" required>
             <br>
             <input type = "submit">signup</input>
-        </form>
+        </form> {% endcomment %}
+        <form method = "POST" >{# {% comment %}
+            
+        {% endcomment %} #}
+            {%csrf_token%}
+            <h2> sign up 2 </h2>
+            {{ form.as_p }}
+            {{ form.errors }}
+            {{ form.non_field_errors }}
+            <input type= "submit">
+        </form> 
+
+        
     </div>
     
 </section>
