@@ -24,12 +24,14 @@
     <form action = "" method = "post">
         {% csrf_token %}
         <label for = "username"> Username</label>
-        <input type = "text" name = "username" id = "username" placeholder="only letter and number" required>
+        <input type = "text" name = "username" id = "username" required>
         <br>
         <label for = "password"> Password </label>
         <input type = "password" name = "password" id = "password" required>
         <br>
-        <input type = "submit">signup</input>
+        <a href = '/signup'>Dont' have account? Sign up here</a>
+        <br>
+        <input type = "submit"></input>
     </form>
     
 </section>

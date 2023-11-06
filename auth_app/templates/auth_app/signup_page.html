@@ -15,7 +15,7 @@
             <li><a href="/">Portfolio</a></li>
             <li><a href="/">Contact</a></li>
         </ul>
-    </nav>
+    </nav> 
 </header>
 <section class="content">
     <div class="item">
@@ -45,14 +45,11 @@
             <br>
             <input type = "submit">signup</input>
         </form> {% endcomment %}
-        <form method = "POST" >{# {% comment %}
-            
-        {% endcomment %} #}
+        
+        <form method = "POST" >{# trying to use form as a class in python rather than explicitly writing it in html #}
             {%csrf_token%}
             <h2> sign up 2 </h2>
             {{ form.as_p }}
-            {{ form.errors }}
-            {{ form.non_field_errors }}
             <input type= "submit">
         </form> 
 
