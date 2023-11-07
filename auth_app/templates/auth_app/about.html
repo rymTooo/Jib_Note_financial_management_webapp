@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel = "stylesheet" href = "style-about.css"> -->
+    <link rel = "stylesheet" href = "static/style-about.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 <section class="content">
     {% include "C:\Users\pattp\jib_note2\auth_app\templates\auth_app\message.html" %}
     <div class="left-panel">
-        <!-- <img src = "Scottish_fold_rw.jpg"> -->
+        <img src = "static/Scottish_fold_rw.jpg">
         <div>
             {% if user.is_authenticated %}
             <h3> Hello {{fname}} </h3>
