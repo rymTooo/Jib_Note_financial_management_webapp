@@ -3,6 +3,8 @@
   The purpose is to build a web app where anyone can tracks and manages their expenses and incomes. It has to be simple and easy to use with all the essential functions of financial management app. 
   The main focus would be for user to records their expenses and incomes along with the details. The web app will have a tool for user to filter and visualize a data in a desire format to have a better understandign of their financial status.
   The target group would be any person or family that have to do financial record. I would love to see my mom uses this web app instead of just recording our family financical record on her notebook.
+### Progress
+  ![20%](https://progress-bar.dev/20)
   
 ### function
 - Record income/outcome from the user.
